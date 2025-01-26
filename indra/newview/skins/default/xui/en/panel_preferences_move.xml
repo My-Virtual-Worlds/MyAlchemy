@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<panel
+ border="true"
+ follows="left|top|right|bottom"
+ height="435"
+ label="Move"
+ layout="topleft"
+ left="102"
+ name="move_panel"
+ top="1"
+ width="517">
+  <tab_container 
+		top_pad="0" 
+		enabled="true" 
+		follows="left|top" 
+		height="435" 
+		left="0"
+		 mouse_opaque="false" 
+		 name="moveview_tab_container" 
+		 tab_position="top"
+		 tab_stop="false" 
+		 width="517">
+			<panel
+				label="General Move and View"
+				name="general_move_panel"
+				filename="panel_preferences_move_general.xml"
+				layout="topleft"
+				follows="all" />
+			<panel
+				label="Mouselook"
+				name="mlook_panel"
+				filename="panel_preferences_move_mlook.xml"
+				layout="topleft"
+				follows="all" />
+	</tab_container>
+</panel>

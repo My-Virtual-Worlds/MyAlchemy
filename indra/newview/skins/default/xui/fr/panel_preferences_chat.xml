@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<panel label="Chat écrit" name="chat">
+    <tab_container name="chat_tab_container">
+		<panel label="General" name="chat_pref_general"  />
+    </tab_container>
+</panel>

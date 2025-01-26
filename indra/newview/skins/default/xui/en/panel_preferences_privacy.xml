@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<panel
+    border="true"
+    follows="left|top|right|bottom"
+    height="428"
+    label="Communication"
+    layout="topleft"
+    left="102"
+    name="im"
+    top="1"
+    width="517">
+
+  <panel.string
+      name="log_in_to_change">
+    log in to change
+  </panel.string>
+
+  <text
+     type="string"
+     length="1"
+     follows="left|top"
+     height="18"
+     layout="topleft"
+     left="20"
+     mouse_opaque="false"
+     name="privacy_text"
+     top="4"
+     text_color="LtGray_50"
+     width="60"
+     valign="center">
+     Privacy:
+    </text>
+    <check_box
+     control_name="AlchemyPointAtPrivate"
+     height="16"
+     label="Do not send my selection target to others or display beam"
+     layout="topleft"
+     follows="left|top"
+     name="privatepointat"
+     tool_tip="Prevents the selection beam from appearing when you touch or edit objects"
+     left="30"
+     width="350" />
+    <check_box
+     control_name="AlchemyDisableEffectSpiral"
+     height="16"
+     label="Do not display the editing swirl effects"
+     layout="topleft"
+     follows="left|top"
+     name="privatepointat"
+     tool_tip="Prevents swirly particles from appearing when you edit objects"
+     left="30"
+     width="350" />
+    <check_box
+     layout="topleft"
+     follows="left|top"
+     height="16"
+     label="Do not play Snapshot animations and sounds"
+     name="quiet_snapshots"
+     width="270"
+     control_name="QuietSnapshotsToDisk" />
+    <check_box
+     height="16"
+     enabled="false"
+     label="Only friends and groups know I'm online"
+     layout="topleft"
+     follows="left|top"
+     name="online_visibility"
+     width="350" />
+    <check_box
+     control_name="VoiceCallsFriendsOnly"
+     enabled="false"
+     height="16"
+     label="Only friends and groups can call or IM me"
+     layout="topleft"
+     follows="left|top"
+     name="voice_call_friends_only_check"
+     width="350">
+    </check_box>
+    <check_box
+     height="16"
+     enabled="false"
+     label="Show my profile info in Search results"
+     layout="topleft"
+     follows="left|top"
+     name="online_searchresults"
+     width="350" />
+    <check_box
+     enabled_control="EnableVoiceChat"
+     control_name="AutoDisengageMic"
+     height="16"
+     label="Switch off microphone when ending calls"
+     layout="topleft"
+     follows="left|top"
+     left="30"
+     name="auto_disengage_mic_check"
+     width="350" />
+    <check_box
+	 enabled="false"
+     control_name="ALDiscordIntegration"
+     height="16"
+     label="Enable Discord Integration"
+     layout="topleft"
+     follows="left|top"
+     left="30"
+     name="Enable_Discord_Integration"
+     width="350" />
+     <check_box
+	 enabled="false"
+     control_name="ALDiscordShareName"
+     height="16"
+     label="Show Username on Discord"
+     layout="topleft"
+     follows="left|top"
+     left="50"
+     name="Discord_Integration_Show_Name"
+     width="350" />
+     <check_box
+	 enabled="false"
+     control_name="ALDiscordShareLocationRegion"
+     height="16"
+     label="Show Region Name on Discord"
+     layout="topleft"
+     follows="left|top"
+     left="50"
+     name="Discord_Integration_Show_Region"
+        width="350" />
+    <combo_box
+     control_name="ALDiscordShareRegionMaxMaturity"
+     follows="left|top"
+     height="23"
+     layout="topleft"
+     left_delta="200"
+     name="maturity_desired_combobox"
+     width="200">
+        <combo_box.item
+         label="General, Moderate, Adult"
+         name="Desired_Adult"
+         value="42" />
+        <combo_box.item
+         label="General and Moderate"
+         name="Desired_Mature"
+         value="21" />
+        <combo_box.item
+         label="General"
+         name="Desired_PG"
+         value="13" />
+        <combo_box.commit_callback
+		 function="Pref.MaturitySettings"/>
+        </combo_box>
+   <text
+      type="string"
+      length="1"
+      follows="left|top"
+      height="20"
+      layout="topleft"
+      left="20"
+      name="mylookat"
+      width="200"
+      top_pad="0"
+      valign="center"
+      text_color="LtGray_50">
+         Inventory:
+      </text>
+      <check_box
+      control_name="AutoAcceptNewInventory"
+      height="16"
+      label="Automatically accept new inventory items"
+      layout="topleft"
+      follows="left|top"
+      name="Auto_Accept_New_Inventory"
+      width="350"
+      left="30" />
+      <check_box
+      control_name="ShowInInventory"
+      height="16"
+      label="Automatically show newly accepted items in inventory"
+      layout="topleft"
+      follows="left|top"
+      name="Show_In_Inventory"
+      width="350"
+      left="30" />
+      <check_box
+      control_name="ShowNewInventory"
+      height="16"
+      label="Automatically view notecards, textures, landmarks after accepting"
+      layout="topleft"
+      name="Show_New_Inventory"
+      left="30"
+      width="350" /> 
+        <text
+         type="string"
+         length="1"
+         follows="left|top"
+         height="20"
+         layout="topleft"
+         left="20"
+         top_pad="0"
+         name="mylookat"
+         valign="center"
+         width="200"
+         text_color="LtGray_50">
+            My LookAt:
+        </text>
+        <check_box
+         control_name="AlchemyLookAtPrivate"
+         height="16"
+         label="Don't send my Look At target to others"
+         layout="topleft"
+         left="30"
+         name="privatelookat"
+         tool_tip="Disable your camera focus point from showing to others"
+         width="350" />
+        <check_box
+         control_name="AlchemyLookAtClampEnabled"
+         disabled_control="AlchemyLookAtPrivate"
+         height="16"
+         label="Limit Look At Distance"
+         layout="topleft"
+         left="30"
+         name="privatelookat"
+         tool_tip="Allows cosmetic features like eye and head movement but will point at nothing specific if beyond the set distance."
+         width="200" />
+         <slider
+            height="16"
+            left_pad="10"
+            top_delta="0"
+            min_val="0.5"
+            max_val="128"
+            follows="top|left"
+            control_name="AlchemyLookAtClampDistance"
+            disabled_control="AlchemyLookAtPrivate"
+            initial_value="1.0"
+            increment="0.5"
+            label="Max Distance"
+            width="275"
+            layout="topleft"/>
+    <button
+     follows="left|top"
+     height="23"
+     label="Block list"
+     layout="topleft"
+     left="30"
+     name="block_list"
+     top_pad="4"
+     width="145">
+        <!--<button.commit_callback
+         function="SideTray.ShowPanel"-->
+      <button.commit_callback
+         function="Pref.BlockList"/>
+    </button>
+    <text
+     type="string"
+     length="1"
+     follows="left|top"
+     height="14"
+     layout="topleft"
+     left_pad="10"
+     mouse_opaque="false"
+     name="block_list_label"
+     top_delta="3"
+     text_color="LtGray_50"
+     width="320"
+     font="SansSerifSmall">
+       (People and/or Objects you have blocked)
+    </text>
+
+    <button
+      follows="left|top"
+      label="Clear History"
+      tool_tip="Clear search and teleport history, web and texture cache"
+      layout="topleft"
+      left="30"
+      name="clear_cache"
+      top_pad="10"
+      width="145">
+    <button.commit_callback
+        function="Pref.WebClearCache" />
+  </button>
+
+  <text
+      type="string"
+      length="1"
+      follows="left|top"
+      height="14"
+      layout="topleft"
+      left_pad="10"
+      mouse_opaque="false"
+      name="cache_size_label_l"
+      top_delta="3"
+      text_color="LtGray_50"
+      width="320">
+    (Locations, images, web, search history)
+  </text>
+    </panel>

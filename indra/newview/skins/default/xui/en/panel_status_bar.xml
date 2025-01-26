@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<panel
+ background_opaque="true"
+ background_visible="true"
+ bg_opaque_color="DkGray"
+ chrome="true"
+ follows="top|right"
+ height="19"
+ layout="topleft"
+ left="0"
+ mouse_opaque="false"
+ name="status"
+ top="19"
+ width="1000">
+	<panel.string
+     name="packet_loss_tooltip">
+		Packet Loss
+	</panel.string>
+	<panel.string
+     name="bandwidth_tooltip">
+		Bandwidth
+	</panel.string>
+	<panel.string
+     name="time">
+		[hour12, datetime, slt]:[min, datetime, slt] [ampm, datetime, slt] [timezone,datetime, slt]
+	</panel.string>
+	<panel.string
+     name="timeSeconds">
+		[hour12, datetime, slt]:[min, datetime, slt]:[second, datetime, slt] [ampm, datetime, slt] [timezone,datetime, slt]
+	</panel.string>
+	<panel.string
+     name="timeTooltip">
+		[weekday, datetime, slt], [day, datetime, slt] [month, datetime, slt] [year, datetime, slt]
+	</panel.string>
+	<panel.string
+     name="buycurrencylabel">
+		L$ [AMT]
+	</panel.string>
+	<panel
+	   height="18"
+	   left="375"
+	   top="1"
+	   width="120"
+	   follows="right|top"
+	   name="menu_search_panel"
+	   bg_opaque_color="MouseGray">
+		<search_editor
+		 clear_button_visible="true"
+		 follows="left|top"
+		 height="18"
+		 label="Search Menus"
+		 layout="topleft"
+		 left="0"
+		 max_length_bytes="255"
+		 name="search_menu_edit"
+		 right="-1"
+		 text_pad_left="6"
+		 tool_tip="Type the search term you are interested in here. Results will be displayed for partial fulltext matches within the menu."
+		 top="0">
+			<search_button
+			 top_pad="4"
+			 left_pad="4"
+			 width="12"
+			 height="12"
+			 image_unselected="Search"
+			 image_selected="Search"/>
+			<clear_button
+			 bottom="2"
+			 height="12"
+			 image_unselected="Icon_Close_Foreground"
+			 image_selected="Icon_Close_Press"
+			 pad_right="4"
+			 pad_left="4"
+			 width="12"/>
+		</search_editor>
+	</panel>
+	<panel
+	  visibility_control="ShowStatusBarBalance"
+	  height="18"
+	  left_pad="60"
+	  width="160"
+	  top="1"
+	  follows="right|top"
+	  name="balance_bg">
+		<text
+         valign="center"
+		 halign="center"
+		 font="SansSerif"
+		 follows="all"
+		 height="18"
+		 left="0"
+		 name="balance"
+		 tool_tip="Click to refresh your L$ balance"
+		 top="0"
+		 wrap="false"
+		 value="L$???"
+		 width="100" />
+		<button
+		 halign="center"
+		 font="SansSerifSmall"
+		 follows="right|top|bottom"
+		 image_hover_unselected="PushButton_Over"
+		 image_unselected="PushButton_Off"
+		 image_pressed="PushButton_Press"
+		 height="18"
+		 label="Buy L$"
+		 label_color="White"
+		 left_pad="0"
+		 label_shadow="true"
+		 name="buyL"
+		 pad_right="0"
+		 tool_tip="Click to buy more L$"
+		 top="0"
+		 width="60" />
+	</panel>
+	<text
+     visibility_control="ShowStatusBarTime"
+     type="string"
+     font="SansSerif"
+     text_readonly_color="TimeTextColor"
+     follows="right|top"
+     halign="center"
+     valign="center"
+     height="18"
+     top="1"
+     layout="topleft"
+     left_pad="0"
+     name="TimeText"
+     tool_tip="Current time (Pacific)"
+     width="120">
+		24:00:00 AM PST
+	</text>
+    <button
+     follows="right|top"
+     height="16"
+     image_selected="Cam_FreeCam_Off"
+     image_pressed="Cam_FreeCam_Off"
+     image_unselected="Cam_FreeCam_Off"
+     left_pad="0"
+     top="2"
+     name="presets_icon_camera"
+     tool_tip="My Camera Presets"
+     width="16">
+        <click_callback
+         function="Floater.ToggleOrBringToFront"
+         parameter="camera" />
+    </button>
+    <button
+     follows="right|top"
+     height="16"
+     image_selected="Presets_Icon"
+     image_pressed="Presets_Icon"
+     image_unselected="Presets_Icon"
+     left_pad="6"
+     top="2"
+     name="presets_icon_graphic"
+     tool_tip="Graphics Presets"
+     width="16">
+        <click_callback
+         function="Floater.ToggleOrBringToFront"
+         parameter="lightbox" />
+    </button>
+	<button
+     follows="right|top"
+     height="16"
+     image_selected="Move"
+     image_unselected="Move_Off"
+     is_toggle="true"
+     left_pad="6"
+     top="2"
+     name="ao_btn"
+     width="16" />
+	<button
+     follows="right|top"
+     height="16"
+     image_selected="Play_Off"
+     image_unselected="Pause_Off"
+     image_pressed="Pause_Press"
+     image_pressed_selected="Play_Press"
+     is_toggle="true"
+     left_pad="6"
+     top="2"
+     name="media_toggle_btn"
+     tool_tip="Start/Stop All Media (Music, Video, Web pages)"
+     width="16" />
+	<button
+     follows="right|top"
+     height="16"
+     image_selected="AudioMute_Off"
+     image_pressed="Audio_Press"
+     image_unselected="Audio_Off"
+     is_toggle="true"
+     left_pad="6"
+     top="2"
+     name="volume_btn"
+     width="16" />
+    <button
+     follows="right|top"
+     height="16"
+     image_selected="Icon_Gear"
+     image_pressed="Icon_Gear"
+     image_unselected="Icon_Gear"
+     left_pad="6"
+     top="2"
+     name="quick_settings_btn"
+     width="16">
+          <click_callback
+           function="Floater.ToggleOrBringToFront"
+           parameter="quick_settings" />
+     </button>
+    <text
+     visibility_control="ShowStatusBarFPS"
+     type="string"
+     font="SansSerif"
+     text_color="FPSTextColor"
+     follows="right|top"
+     halign="center"
+     valign="center"
+     height="18"
+     top="1"
+     v_pad="0"
+     left_pad="0"
+     name="FPSText"
+     tool_tip="Current FPS"
+     width="40">
+     240
+     </text>
+</panel>
