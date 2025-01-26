@@ -1,0 +1,32 @@
+name: Enhancement
+description: New enhancement
+title: "[New Enhancement]: "
+labels: [enhancement, triage]
+body:
+- type: markdown
+  attributes:
+    value: |
+      - Write a descriptive enhancement title above.
+      - Search [open](https://github.com/My-Virtual-Worlds/MyAlchemy/issues?q=is%3Aopen+label%3Aenhancement+is%3Aissue) enhancement requests to ensure that the enhacement has not already been requested.
+
+- type: textarea
+  attributes:
+    label: Environment
+    description: About Alchemy Text
+    placeholder: ex. Alchemy Test 7.1.3.240191747 (64bit) ...
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: Description
+    description: What does this enhancement do? Why is it needed? Include screenshots to illustrate how it should function if possible!
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: Do other viewers use proposed enhancement?
+    description: what other viewers, if any, use this enhancement currently? Please provide links to viewers using this enhacement for our review.
+  validations:
+    required: true
